@@ -846,6 +846,24 @@ b {
   .sk-reference {
     margin-left: 0;
   }
+  .indexContent {
+    display: flex;
+    flex-direction: column;
+  }
+  .indexForm {
+    order: 2;
+  }
+  .summaryCard {
+    margin-top: 0;
+    order: 1;
+  }
+  .indexSubmissions {
+    order: 3;
+  }
+  .rentCard {
+    margin-bottom: 0;
+    order: 4;
+  }
 }
 @media only screen and (max-width: 560px) {
   .form-container {
@@ -865,25 +883,6 @@ b {
   }
   .sk-reference {
     margin-left: 0;
-  }
-
-  .indexContent {
-    display: flex;
-    flex-direction: column;
-  }
-  .indexForm {
-    order: 2;
-  }
-  .summaryCard {
-    margin-top: 0;
-    order: 1;
-  }
-  .indexSubmissions {
-    order: 3;
-  }
-  .rentCard {
-    margin-bottom: 0;
-    order: 4;
   }
 }
 .switch {
