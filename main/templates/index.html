@@ -3,38 +3,45 @@
 Registration
 {% endblock %}
 {% block content %}
-<img class="ml-5 mt-3" src="../static/assets/singlekey_logo.png" height="50px"></img>
-<button type="button" class="btn btn-outline-primary float-right mr-5 mt-3" style="width: 13em;margin-top:1%;">Log In</button>
-<hr/>
-<div class='container mt-5'>
-  <form method='POST'>
-    <div class='text-left'>
-      <h2>Submit Information</h2>
-    </div>
-    <div class='mt-3'>
-      <div>
-        <label><b>Applicant Name</b></label><br>
-        <input name='name' placeholder="Applicant Name" class="w-100 py-2 px-2">
+<img class="ml-4 mt-4" src="../static/assets/singlekey_logo.png" height="35px"></img>
+<button type="button" class="btn btn-outline-primary float-right mr-4 mt-4" style="width: 7em; height: 35px;">Log In</button>
+<hr class="mt-3 mb-0"/>
+<div class="container p-0 indexContent">
+  <div class='container indexForm mt-5'>
+    <form method='POST'>
+      <div class='text-left'>
+        <h2 class="font-weight-bold">Submit Information</h2>
       </div>
-      <div class="mt-3">
-        <label><b>Email Address</b></label><br>
-        <input name='email' placeholder="Email Address" class="w-100 py-2 px-2">
+      <div class='mt-3'>
+        <div>
+          <label class="font-weight-bold">Applicant Name</label><br>
+          <input name='name' placeholder="Applicant Name" class="w-100 py-2 px-2">
+        </div>
+        <div class="mt-3">
+          <label class="font-weight-bold">Email Address</label><br>
+          <input name='email' placeholder="Email Address" class="w-100 py-2 px-2">
+        </div>
       </div>
-    </div>
-    <br>
-    <br>
-    {% csrf_token %}
-    <div class='text-left'>
-      <button type='supmit' class='btn btn-secondary mr-lg-3 mb-lg-0 mb-4' style="width: 13em;margin-top:1%;">Submit</button>
-    </div>
-  </form>
-  <hr/>
+      <br>
+      {% csrf_token %}
+      <div class='text-left'>
+        <button type='submit' class='btn btn-secondary mt-0' style="width: 7em;">Submit</button>
+      </div>
+    </form>
+    <hr/>
+  </div>
+  <div class="card summaryCard p-4 mr-0">
+    <h3>Hello Alex</h3>
+    <p>Here is a quick summary of your activity so far. If you have any questions about your report feel free to book a call with us.</p>
+    <button type="button" class="btn btn-outline-secondary bg-transparent" style="width: 7em; height: 35px;">Book a call</button>
+  </div>
+  <div class="container indexSubmissions">
   {% if results %}
-  <div class='w-100 text-left mt-5'>
+  <div class='text-left mt-5'>
     <h3>Submissions</h3>
     <table class="table shadow p-3 mb-5 bg-body rounded">
       <thead>
-        <tr>
+        <tr class="d-none d-sm-table-row">
           <th>Applicant</th>
           <th>Email</th>
           <th>Status</th>
@@ -62,6 +69,12 @@ Registration
     </table>
     {% endif %}
   </div>
+</div>
+<div class="card rentCard p-4 mr-0">
+  <h3>Rent Guarentee</h3>
+  <p>Never miss a rent payment! Learn how our Rent Guarentee Program protects your property and rental income so you can take the risk out of renting.</p>
+  <button type="button" class="btn btn-outline-secondary bg-transparent" style="width: 7em; height: 35px;">Start now</button>
+</div>
 </div>
 <footer class="footer mt-auto py-3">
   <div class="container">
